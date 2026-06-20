@@ -307,7 +307,7 @@ function initMusic() {
     });
 
     // Escuchar cualquier interacción para reproducir música (burlar bloqueos de autoplay)
-    const events = ['click', 'touchstart', 'scroll', 'mousemove', 'keydown'];
+    const events = ['click', 'touchstart', 'touchend', 'pointerdown', 'pointerup', 'scroll', 'mousemove', 'keydown'];
     
     function handleInteraction() {
         playMusic();
