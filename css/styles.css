@@ -2141,8 +2141,14 @@ img {
     }
 
     .hero-content-inner {
-        padding: 3.5rem 1.25rem 2.5rem;
+        padding: 2.5rem 1.25rem 2rem;
         border-radius: calc(28px - 1.5px);
+    }
+
+    .scale-container {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
     }
 
     .hero-frame {
@@ -2162,8 +2168,8 @@ img {
     }
 
     .hero-title {
-        font-size: 2.2rem;
-        margin-bottom: 1rem;
+        font-size: 1.7rem;
+        margin-bottom: 0.8rem;
     }
 
     .hero-date {
@@ -2228,6 +2234,75 @@ img {
 
     .emblema-text {
         font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-wrapper {
+        width: 92%;
+        padding: 1rem;
+    }
+
+    .hero-content-inner {
+        padding: 2rem 1rem 1.5rem;
+    }
+
+    .hero-frame {
+        inset: 6px;
+        border-radius: 12px;
+    }
+
+    .hero-frame::after {
+        inset: 3px;
+        border-radius: 9px;
+    }
+
+    .scale-container {
+        width: 42px;
+        height: 42px;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero-title {
+        font-size: 1.45rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero-date {
+        font-size: 0.68rem;
+        padding: 0.3rem 0.7rem;
+        letter-spacing: 1px;
+        gap: 0.3rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .countdown-container {
+        gap: 0.4rem;
+        margin-top: 1rem;
+    }
+
+    .countdown-item {
+        min-width: 50px;
+        padding: 0.4rem 0.25rem;
+    }
+
+    .countdown-number {
+        font-size: 1.15rem;
+    }
+
+    .countdown-label {
+        font-size: 0.65rem;
+    }
+
+    .scroll-indicator {
+        bottom: 20px;
+        font-size: 0.65rem;
     }
 }
 
