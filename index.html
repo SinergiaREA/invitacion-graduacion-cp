@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación a Graduación | Contaduría Pública</title>
+    <meta
+      name="description"
+      content="Celebra con nosotros la culminación de la Licenciatura en Contaduría Pública."
+    />
+
+    <!-- Favicon / Icono de la pestaña -->
+    <link rel="icon" type="image/png" href="assets/images/foto-grupal.png" />
+
+    <!-- Open Graph para compartir en Redes Sociales (WhatsApp, Facebook, etc.) -->
+    <meta
+      property="og:title"
+      content="Invitación a Graduación - Contaduría Pública"
+    />
+    <meta
+      property="og:description"
+      content="Nos llena de orgullo invitarte a nuestra ceremonia de graduación."
+    />
+    <meta property="og:type" content="website" />
+    <!-- NOTA: Para máxima compatibilidad al compartir, se recomienda usar una URL absoluta (ej: https://tu-sitio.com/assets/images/foto-grupal.png) -->
+    <meta property="og:image" content="assets/images/foto-grupal.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- simpleParallax CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+  </head>
+  <body>
+    <!-- Partículas doradas flotantes -->
+    <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+    <!-- Música opcional (requiere un archivo mp3 en la carpeta assets/audio) -->
+    <div class="top-bar">
+      <button
+        id="music-btn"
+        class="music-btn"
+        aria-label="Reproducir música de fondo"
+      >
+        <svg
+          class="music-svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path class="music-note" d="M9 18V5l12-2v13"></path>
+          <circle class="music-circle" cx="6" cy="18" r="3"></circle>
+          <circle class="music-circle-2" cx="18" cy="16" r="3"></circle>
+          <line
+            class="music-mute-line"
+            x1="4"
+            y1="20"
+            x2="20"
+            y2="4"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          ></line>
+        </svg>
+      </button>
+      <audio
+        id="bg-music"
+        src="assets/music/244. Graduation.mp3"
+        loop
+        preload="auto"
+      >
+        <source src="assets/music/244. Graduation.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <!-- 5.1 Portada (Hero Section) -->
+    <section class="hero" id="hero">
+      <div class="hero-img-container">
+        <!-- La imagen de fondo utilizará simpleParallax -->
+        <img
+          src="assets/images/foto-grupal.jpg"
+          alt="Generación de Contaduría Pública"
+          class="hero-img thumbnail"
+          onerror="
+            this.src =
+              'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'
+          "
+        />
+      </div>
+
+      <!-- Elementos flotantes decorativos para efecto parallax multi-capa (Temática Contabilidad) -->
+      <div class="hero-deco hero-deco-1" title="Calculadora">
+        <svg
+          class="hero-deco-svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#d4af37"
+          stroke-width="1.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+          <line x1="8" y1="6" x2="16" y2="6" />
+          <line x1="16" y1="14" x2="16" y2="18" />
+          <line x1="8" y1="10" x2="8" y2="10" />
+          <line x1="12" y1="10" x2="12" y2="10" />
+          <line x1="16" y1="10" x2="16" y2="10" />
+          <line x1="8" y1="14" x2="8" y2="14" />
+          <line x1="12" y1="14" x2="12" y2="14" />
+          <line x1="8" y1="18" x2="8" y2="18" />
+          <line x1="12" y1="18" x2="12" y2="18" />
+        </svg>
+      </div>
+      <div class="hero-deco hero-deco-2" title="Reporte Financiero">
+        <svg
+          class="hero-deco-svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#d4af37"
+          stroke-width="1.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path
+            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+          />
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+          <line x1="8" y1="11" x2="16" y2="11" />
+          <line x1="8" y1="16" x2="12" y2="16" />
+        </svg>
+      </div>
+      <div class="hero-deco hero-deco-3" title="Gráfico Estadístico">
+        <svg
+          class="hero-deco-svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#d4af37"
+          stroke-width="1.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+          <path d="M22 12A10 10 0 0 0 12 2v10z" />
+        </svg>
+      </div>
+      <div class="hero-deco hero-deco-4" title="Gráfico de Tendencias">
+        <svg
+          class="hero-deco-svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#d4af37"
+          stroke-width="1.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+          <polyline points="16 7 22 7 22 13" />
+        </svg>
+      </div>
+
+      <div class="hero-content-wrapper">
+        <div class="hero-content">
+          <div class="hero-content-inner">
+            <!-- Premium Art Deco gold border frame -->
+            <div class="hero-frame"></div>
+
+            <!-- Balanza de la Contaduría Animada SVG (Con Gradiente Metálico y Brillo) -->
+            <div class="scale-container">
+              <svg
+                class="accounting-scale"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <defs>
+                  <linearGradient
+                    id="gold-grad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#f3e5ab" />
+                    <stop offset="35%" stop-color="#d4af37" />
+                    <stop offset="65%" stop-color="#aa7c11" />
+                    <stop offset="100%" stop-color="#d4af37" />
+                  </linearGradient>
+                  <filter
+                    id="gold-glow-effect"
+                    x="-20%"
+                    y="-20%"
+                    width="140%"
+                    height="140%"
+                  >
+                    <feGaussianBlur stdDeviation="2.2" result="blur" />
+                    <feComponentTransfer in="blur" result="glow">
+                      <feFuncA type="linear" slope="0.45" />
+                    </feComponentTransfer>
+                    <feMerge>
+                      <feMergeNode in="glow" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+                <!-- Base / Stand -->
+                <path
+                  d="M 30,85 L 70,85 M 50,85 L 50,25 M 42,25 L 58,25"
+                  stroke="url(#gold-grad)"
+                  stroke-width="3.5"
+                  stroke-linecap="round"
+                  fill="none"
+                  filter="url(#gold-glow-effect)"
+                />
+                <!-- Central pivot pin -->
+                <circle
+                  cx="50"
+                  cy="25"
+                  r="3.5"
+                  fill="url(#gold-grad)"
+                  filter="url(#gold-glow-effect)"
+                />
+                <!-- Moving Beam (Arm) - Using <rect> to fix 0-height SVG filter rendering bug in Chrome/Safari -->
+                <g
+                  class="scale-beam-group"
+                  filter="url(#gold-glow-effect)"
+                  style="transform-origin: 50% 25%"
+                >
+                  <rect
+                    class="scale-beam"
+                    x="15"
+                    y="23.5"
+                    width="70"
+                    height="3"
+                    rx="1.5"
+                    fill="url(#gold-grad)"
+                  />
+                  <!-- Left pan & cords -->
+                  <g class="scale-pan-left" style="transform-origin: 15% 25%">
+                    <line
+                      x1="15"
+                      y1="25"
+                      x2="5"
+                      y2="55"
+                      stroke="url(#gold-grad)"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                    />
+                    <line
+                      x1="15"
+                      y1="25"
+                      x2="25"
+                      y2="55"
+                      stroke="url(#gold-grad)"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M 1,55 L 29,55 Q 15,66 1,55"
+                      fill="rgba(212, 175, 55, 0.15)"
+                      stroke="url(#gold-grad)"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <!-- Coins/Assets inside left pan -->
+                    <circle cx="15" cy="51" r="3.5" fill="url(#gold-grad)" />
+                    <circle cx="11" cy="51" r="2.5" fill="url(#gold-grad)" />
+                  </g>
+                  <!-- Right pan & cords -->
+                  <g class="scale-pan-right" style="transform-origin: 85% 25%">
+                    <line
+                      x1="85"
+                      y1="25"
+                      x2="75"
+                      y2="55"
+                      stroke="url(#gold-grad)"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                    />
+                    <line
+                      x1="85"
+                      y1="25"
+                      x2="95"
+                      y2="55"
+                      stroke="url(#gold-grad)"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M 71,55 L 99,55 Q 85,66 71,55"
+                      fill="rgba(212, 175, 55, 0.15)"
+                      stroke="url(#gold-grad)"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <!-- Coins/Liabilities inside right pan -->
+                    <circle cx="85" cy="51" r="3.5" fill="url(#gold-grad)" />
+                    <circle cx="89" cy="51" r="2.5" fill="url(#gold-grad)" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <div class="hero-subtitle">Invitación a Graduación</div>
+            <h1 class="hero-title" id="career-text">
+              Licenciatura en Contaduría Pública
+            </h1>
+            <div class="hero-date">
+              <span class="badge-spark">✦</span>
+              Generación <span id="generation-text"></span>
+              <span class="badge-spark">✦</span>
+            </div>
+
+            <!-- Mejora: Countdown -->
+            <div class="countdown-container" id="countdown">
+              <div class="countdown-item">
+                <span class="countdown-number" id="cd-days">00</span>
+                <span class="countdown-label">Días</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="cd-hours">00</span>
+                <span class="countdown-label">Hrs</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="cd-minutes">00</span>
+                <span class="countdown-label">Min</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="cd-seconds">00</span>
+                <span class="countdown-label">Seg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicador de Scroll UX -->
+      <div class="scroll-indicator">
+        <span>Desliza para descubrir</span>
+        <div class="mouse-icon">
+          <div class="scroll-wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Separador animado -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond">◆</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- 5.2 Mensaje Principal -->
+    <section class="mensaje-section" id="mensaje">
+      <div class="container">
+        <div class="mensaje-card reveal">
+          <!-- Decorative animated quotes -->
+          <div class="mensaje-quote mensaje-quote-open">❝</div>
+          <div class="mensaje-quote mensaje-quote-close">❞</div>
+
+          <!-- Sparkle accents -->
+          <div class="mensaje-sparkle mensaje-sparkle-1">✦</div>
+          <div class="mensaje-sparkle mensaje-sparkle-2">✦</div>
+          <div class="mensaje-sparkle mensaje-sparkle-3">✧</div>
+
+          <!-- Corner decorations -->
+          <div class="mensaje-corner mensaje-corner-tl"></div>
+          <div class="mensaje-corner mensaje-corner-tr"></div>
+          <div class="mensaje-corner mensaje-corner-bl"></div>
+          <div class="mensaje-corner mensaje-corner-br"></div>
+
+          <!-- Accent line -->
+          <div class="mensaje-accent-line"></div>
+
+          <p class="mensaje-texto" id="main-message">Cargando mensaje...</p>
+
+          <!-- Bottom decorative line -->
+          <div class="mensaje-bottom-deco">
+            <span class="mensaje-deco-line"></span>
+            <span class="mensaje-deco-star">✦</span>
+            <span class="mensaje-deco-line"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.3 Asesores -->
+    <section class="asesores-section" id="asesores">
+      <div class="container text-center">
+        <h2 class="section-title reveal">Nuestros Asesores</h2>
+        <ul class="asesores-list" id="asesores-list">
+          <!-- Inyectado vía JS -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Separador animado -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond">◆</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- 5.4 Alumnos -->
+    <section class="alumnos-section" id="alumnos">
+      <div class="container text-center">
+        <h2 class="section-title reveal">Egresados</h2>
+        <div class="alumnos-grid" id="alumnos-grid">
+          <!-- Inyectado vía JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Separador animado -->
+    <div class="section-divider dark">
+      <div class="divider-line"></div>
+      <div class="divider-diamond">✦</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Frase Decorativa Intermedia -->
+    <section class="frase-section">
+      <div class="frase-overlay"></div>
+      <div class="frase-content reveal">
+        <p class="frase-texto" id="frase-text"></p>
+      </div>
+    </section>
+
+    <!-- 5.5 Galería de Fotos -->
+    <section class="galeria-section" id="galeria">
+      <!-- Decorative floating elements -->
+      <div class="galeria-deco galeria-deco-1">✦</div>
+      <div class="galeria-deco galeria-deco-2">✦</div>
+      <div class="galeria-deco galeria-deco-3">◆</div>
+
+      <div class="container text-center">
+        <h2 class="section-title reveal">Nuestra Generación</h2>
+        <p class="galeria-subtitulo reveal">
+          Momentos que atesoraremos por siempre
+        </p>
+        <div class="galeria-grid">
+          <div class="galeria-item reveal-left" data-index="0">
+            <div class="galeria-img-wrapper">
+              <img
+                src="assets/images/galeria-1.png"
+                alt="Graduados lanzando birretes"
+                class="galeria-img"
+                loading="lazy"
+              />
+              <div class="galeria-overlay">
+                <div class="galeria-overlay-content">
+                  <span class="galeria-zoom-icon">⊕</span>
+                  <span class="galeria-overlay-text">Ver foto</span>
+                </div>
+              </div>
+              <!-- Decorative corners -->
+              <div class="galeria-corner galeria-corner-tl"></div>
+              <div class="galeria-corner galeria-corner-tr"></div>
+              <div class="galeria-corner galeria-corner-bl"></div>
+              <div class="galeria-corner galeria-corner-br"></div>
+              <!-- Photo number -->
+              <div class="galeria-number">01</div>
+            </div>
+            <p class="galeria-caption">La alegría de haber culminado</p>
+          </div>
+          <div class="galeria-item reveal-right" data-index="1">
+            <div class="galeria-img-wrapper">
+              <img
+                src="assets/images/foto-grupal.png"
+                alt="Foto grupal formal"
+                class="galeria-img"
+                loading="lazy"
+              />
+              <div class="galeria-overlay">
+                <div class="galeria-overlay-content">
+                  <span class="galeria-zoom-icon">⊕</span>
+                  <span class="galeria-overlay-text">Ver foto</span>
+                </div>
+              </div>
+              <!-- Decorative corners -->
+              <div class="galeria-corner galeria-corner-tl"></div>
+              <div class="galeria-corner galeria-corner-tr"></div>
+              <div class="galeria-corner galeria-corner-bl"></div>
+              <div class="galeria-corner galeria-corner-br"></div>
+              <!-- Photo number -->
+              <div class="galeria-number">02</div>
+            </div>
+            <p class="galeria-caption">Unidos por un mismo sueño</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">
+        ✕
+      </button>
+      <button
+        class="lightbox-nav lightbox-prev"
+        id="lightbox-prev"
+        aria-label="Anterior"
+      >
+        ❮
+      </button>
+      <button
+        class="lightbox-nav lightbox-next"
+        id="lightbox-next"
+        aria-label="Siguiente"
+      >
+        ❯
+      </button>
+      <img class="lightbox-img" id="lightbox-img" alt="" />
+    </div>
+
+    <!-- 5.6 Información del Evento & Itinerario -->
+    <section class="evento-section container" id="evento">
+      <h2 class="section-title text-center reveal">Detalles del Evento</h2>
+
+      <div class="evento-grid reveal">
+        <div class="evento-detalles">
+          <!-- Mejora: Itinerario -->
+          <div class="detalle-item">
+            <div class="detalle-icon">📅</div>
+            <div class="detalle-info">
+              <h4>Fecha e Itinerario</h4>
+              <p class="evento-fecha-texto">Viernes, 7 de Agosto de 2026</p>
+              <ul class="itinerario-list">
+                <li class="itinerario-item">
+                  <div class="iti-hora">16:30 hrs</div>
+                  <div>Acto Académico y Entrega de Cartas</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="detalle-item">
+            <div class="detalle-icon">📍</div>
+            <div class="detalle-info">
+              <h4>Lugar</h4>
+              <p id="event-place"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa Embebido -->
+        <div class="map-container reveal">
+          <iframe
+            id="map-iframe"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa de ubicación del evento"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5.9 Footer -->
+    <footer class="footer">
+      <div class="footer-divider-deco">
+        <span class="footer-line"></span>
+        <span class="footer-star">✦</span>
+        <span class="footer-line"></span>
+      </div>
+      <div class="container footer-container">
+        <div class="footer-emblema-wrapper">
+          <div class="footer-emblema">
+            <div class="emblema-ring"></div>
+            <span class="emblema-text">CP</span>
+          </div>
+        </div>
+        <p class="footer-generation">
+          <span class="badge-spark">✦</span>
+          Generación <span id="footer-generation">2023 - 2026</span>
+          <span class="badge-spark">✦</span>
+        </p>
+        <h3 class="footer-career">Licenciatura en Contaduría Pública</h3>
+        <div class="footer-credits-container">
+          <div class="footer-credits-badge">
+            <span class="badge-spark">✦</span>
+            <span class="badge-text"
+              >Desarrollado por
+              <a
+                href="https://sinergiarea.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="credit-link"
+                >Sinergia moments</a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="footer-social">
+          <a
+            href="https://www.facebook.com/SinergiaREA101307"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Facebook de Sinergia Moments"
+          >
+            <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"
+              />
+            </svg>
+            <span>Sinergia Moments</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- App JS -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
