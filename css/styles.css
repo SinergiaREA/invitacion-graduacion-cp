@@ -2167,10 +2167,15 @@ img {
     }
 
     .hero-date {
-        font-size: 0.95rem;
-        padding: 0.4rem 1.2rem;
+        font-size: 0.78rem;
+        padding: 0.35rem 0.8rem;
         margin-bottom: 1rem;
-        letter-spacing: 2px;
+        letter-spacing: 1.5px;
+        gap: 0.4rem;
+    }
+
+    .hero-date .badge-spark {
+        font-size: 0.6rem;
     }
 
     .hero-deco-svg {
@@ -2187,13 +2192,18 @@ img {
         font-size: 1.2rem;
     }
     
+    .countdown-container {
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
     .countdown-item {
-        min-width: 60px;
-        padding: 0.5rem;
+        min-width: 58px;
+        padding: 0.5rem 0.35rem;
     }
     
     .countdown-number {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
     }
 
     /* Mobile footer responsive adjustments */
