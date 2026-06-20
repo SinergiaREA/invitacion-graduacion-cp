@@ -307,14 +307,15 @@ function initMusic() {
     });
 
     // Escuchar cualquier interacción para reproducir música (burlar bloqueos de autoplay)
-    const events = ['click', 'touchstart', 'touchend', 'pointerdown', 'pointerup', 'scroll', 'mousemove', 'keydown'];
+    // touchmove = gesto de deslizar en móvil, califica como user gesture en la mayoría de navegadores
+    const events = ['click', 'touchstart', 'touchend', 'touchmove', 'pointerdown', 'pointerup', 'scroll', 'mousemove', 'keydown'];
     
     function handleInteraction() {
         playMusic();
     }
 
     events.forEach(event => {
-        document.addEventListener(event, handleInteraction, { passive: true });
+        document.addEventListener(event, handleInteraction, { once: true, passive: true });
     });
 
     function removeInteractionListeners() {
